@@ -1,38 +1,166 @@
-.App {
+/* styles.css */
+
+/* Global Styles */
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+/* Flexbox 1 */
+.flex1 {
+  font-size: 36px; /* Increase the font size */
+  color: #fff; /* Text color */
+  background-color: #3498db; /* Background color */
+  padding: 10px; /* Add padding for better readability */
+  border-radius: 8px; /* Add border-radius for rounded corners */
+  text-align: center; /* Center the text */
+}
+
+/* Flexbox 2 */
+.flex2 {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.inputbox {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.button {
+  padding: 10px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #2980b9;
+}
+
+/* Flexbox Class */
+.flexclass {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.flexclass > * {
+  flex: 1 0 calc(30% - 10px); 
+  margin: 5px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Text Class */
+.textclass {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Lists */
+ul {
+  list-style: none;
+  padding: 0;
+  width: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+li {
+  margin-bottom: 5px;
+  border: 1px solid #ddd;
+  padding: 5px;
+  border-radius: 4px;
 }
 
-.App-link {
-  color: #61dafb;
+li span {
+  display: block;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Buttons */
+button {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Typography */
+h2 {
+  font-size: 20px;
+  color: #333;
+  margin-top: 20px;
+}
+
+/* Grid Layout for Lists */
+ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 20px; 
+}
+
+/* List Items */
+li {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+/* Images */
+img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+/* Paragraphs */
+p {
+  margin: 5px 0;
+}
+
+/* Navbar Styles */
+.navbar {
+  padding: 10px 20px; 
+}
+
+.navbar-toggler {
+  border: 1px solid #fff;
+}
+
+.navbar-toggler-icon {
+  background-color: #fff; 
+}
+
+.navbar-nav .nav-link {
+  padding: 10px 10px; 
+}
+
+/* Button Class */
+.btn {
+  padding: 5px 10px; 
 }
