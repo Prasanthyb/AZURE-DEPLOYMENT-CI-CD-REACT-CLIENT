@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import cars from "./TemplateData.json";
+import "./App.css";
 
 const ApiKey = "51732afeaeba4f48964f8a32f8c318c0";
 const AzureEndpoint = "https://mission.cognitiveservices.azure.com/";
@@ -7,6 +9,13 @@ function App() {
   const [data, setData] = useState();
   const [image, setImage] = useState('');
   const [displayMsg, setDisplayMsg] = useState(' ');
+  const [similarCarsData, setSimilarCarsData] = useState(null);
+  const [wishlist, setWishlist] = useState([]);
+  const [parsedData, setParsedData] = useState();
+
+  const addToWishlist = (car) => {
+    setWishlist((prevWishlist) => [...prevWishlist, car]);
+  };
 
   const handleOnChange = (e) => {
     setImage(e.target.value);
@@ -49,6 +58,7 @@ function App() {
 
         const parsedData = await response.json();
         setData(parsedData);
+        setParsedData(parsedData);
 
         console.log(parsedData.modelVersion);
         console.log(parsedData.captionResult.text);
@@ -59,6 +69,17 @@ function App() {
         setDisplayMsg('Sorry, there was an error.');
       }
     }
+  };
+
+  const getSimilarCars = () => {
+    const sentence = parsedData.captionResult.text;
+    const words = sentence.split(' ');
+    const secondWord = words[1];
+
+   const similarCars=cars.filter(cars=>cars.color===secondWord);
+     
+      setSimilarCarsData(similarCars);
+    
   };
 
   return (
@@ -79,7 +100,7 @@ function App() {
                 display: 'block',
               }}
             >
-              Don't Dream It, Drive It!
+              Don't Dream It, Drive It !
             </h3>
           </div>
         </div>
@@ -125,24 +146,60 @@ function App() {
           <p className="textclass">{data && data.captionResult.text}</p>
 
           {data &&
-            data.tagsResult &&
-            data.tagsResult.values.some((item) => item.name === 'car') ? (
-              <ul>
-                {data.tagsResult.values.map((item) => (
-                  <li key={item.name}>
-                    <span>
-                      {item.name} - Confidence level {parseInt(item.confidence * 100)}%
-                    </span>
-                  </li>
-                ))}
-              </ul>
-            ) : (
-              <div>{displayMsg && <p>{displayMsg}</p>}</div>
-            )}
+          data.tagsResult &&
+          data.tagsResult.values.some((item) => item.name === 'car') ? (
+            <ul>
+              {data.tagsResult.values.map((item) => (
+                <li key={item.name}>
+                  <span>
+                    {item.name} - Confidence level {parseInt(item.confidence * 100)}%
+                  </span>
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <div>{displayMsg && <p>{displayMsg}</p>}</div>
+          )}
         </section>
+
+        <button onClick={getSimilarCars}>Get Similar Cars from Turners</button>
+        {similarCarsData && (
+          <div className="similar-cars-section">
+            <h2>Similar Cars from Turners</h2>
+            <ul>
+              {similarCarsData.map((car) => (
+                <li key={car.id}>
+                  <img src={car.image} alt={car.name} width={100} height={80} />
+                  <p>Name: {car.name}</p>
+                  <p>Color: {car.color}</p>
+                  <p>Amount: ${car.amount}</p>
+                  <button onClick={() => addToWishlist(car)}>Add to Wishlist</button>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+
+        <div className="wishlist-section" style={{ backgroundColor: 'lightgreen' }}>
+          <h2 style={{ color: 'red' }}>
+           
+            Wishlist{' '}
+          </h2>
+          <ul>
+            {wishlist.map((wishlistItem, index) => (
+              <li key={index}>
+                <img src={wishlistItem.image} alt={wishlistItem.name} width={100} height={80} />
+                <p>Name: {wishlistItem.name}</p>
+                <p>Color: {wishlistItem.color}</p>
+                <p>Amount: ${wishlistItem.amount}</p>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </div>
   );
 }
+
 
 export default App;

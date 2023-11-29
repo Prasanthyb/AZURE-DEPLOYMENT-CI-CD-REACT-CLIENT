@@ -1,0 +1,146 @@
+[
+    {
+        "id": 1,
+        "image": "/images/Jazz.png",
+        "name": "Jazz",
+        "color": "red",
+        "amount": 25000,
+        "createdAt": "2023-11-22T02:07:12.000Z",
+        "updatedAt": "2023-11-22T02:07:12.000Z"
+    },
+    {
+        "id": 2,
+        "image": "/images/Crossstar.png",
+        "name": "CrossStar",
+        "color": "silver",
+        "amount": 30000,
+        "createdAt": "2023-11-22T02:09:02.000Z",
+        "updatedAt": "2023-11-22T02:09:02.000Z"
+    },
+    {
+        "id": 3,
+        "image": "/images/Luke.png",
+        "name": "Luke",
+        "color": "black",
+        "amount": 35000,
+        "createdAt": "2023-11-22T02:14:14.000Z",
+        "updatedAt": "2023-11-22T02:14:14.000Z"
+    },
+    {
+        "id": 4,
+        "image": "/images/Express.png",
+        "name": "Express",
+        "color": "black",
+        "amount": 20000,
+        "createdAt": "2023-11-22T02:15:13.000Z",
+        "updatedAt": "2023-11-22T02:15:13.000Z"
+    },
+    {
+        "id": 5,
+        "image": "/images/Civic.png",
+        "name": "Civic",
+        "color": "white",
+        "amount": 45000,
+        "createdAt": "2023-11-22T02:19:55.000Z",
+        "updatedAt": "2023-11-22T02:19:55.000Z"
+    },
+    {
+        "id": 6,
+        "image": "/images/Riggeline.png",
+        "name": "Ridgeline",
+        "color": "white",
+        "amount": 43000,
+        "createdAt": "2023-11-22T02:21:22.000Z",
+        "updatedAt": "2023-11-22T02:21:22.000Z"
+    },
+    {
+        "id": 7,
+        "image": "/images/SantaFe.png",
+        "name": "SantaFe",
+        "color": "white",
+        "amount": 44000,
+        "createdAt": "2023-11-22T02:22:10.000Z",
+        "updatedAt": "2023-11-22T02:22:10.000Z"
+    },
+    {
+        "id": 8,
+        "image": "/images/Shutter.png",
+        "name": "Shutter",
+        "color": "black",
+        "amount": 42000,
+        "createdAt": "2023-11-22T02:42:14.000Z",
+        "updatedAt": "2023-11-22T02:42:14.000Z"
+    },
+    {
+        "id": 9,
+        "image": "/images/Veteezy.png",
+        "name": "Vecteezy",
+        "color": "black",
+        "amount": 41000,
+        "createdAt": "2023-11-22T02:42:59.000Z",
+        "updatedAt": "2023-11-22T02:42:59.000Z"
+    },
+    {
+        "id": 10,
+        "image": "/images/Jaguar.png",
+        "name": "Jaguar",
+        "color": "black",
+        "amount": 51000,
+        "createdAt": "2023-11-22T09:56:59.000Z",
+        "updatedAt": "2023-11-22T09:57:25.000Z"
+    },
+    {
+        "id": 11,
+        "image": "/images/Best.png",
+        "name": "Best",
+        "color": "blue",
+        "amount": 62000,
+        "createdAt": "2023-11-22T09:56:59.000Z",
+        "updatedAt": "2023-11-22T09:57:25.000Z"
+    },
+    {
+        "id": 12,
+        "image": "/images/Aqua.png",
+        "name": "Aqua",
+        "color": "blue",
+        "amount": 55000,
+        "createdAt": "2023-11-22T09:56:59.000Z",
+        "updatedAt": "2023-11-22T09:57:25.000Z"
+    },
+    {
+        "id": 13,
+        "image": "/images/Pixar.png",
+        "name": "Pixar",
+        "color": "blue",
+        "amount": 60000,
+        "createdAt": "2023-11-22T09:56:59.000Z",
+        "updatedAt": "2023-11-22T09:57:25.000Z"
+    },
+    {
+        "id": 14,
+        "image": "/images/Robb.png",
+        "name": "Robb",
+        "color": "red",
+        "amount": 59000,
+        "createdAt": "2023-11-22T09:56:59.000Z",
+        "updatedAt": "2023-11-22T09:57:25.000Z"
+    },
+    {
+        "id": 15,
+        "image": "/images/Alamy.png",
+        "name": "Alamy",
+        "color": "red",
+        "amount": 73000,
+        "createdAt": "2023-11-22T09:56:59.000Z",
+        "updatedAt": "2023-11-22T09:57:25.000Z"
+    },
+    {
+        "id": 16,
+        "image": "/images/Mazda.png",
+        "name": "Mazda",
+        "color": "red",
+        "amount": 69000,
+        "createdAt": "2023-11-22T09:56:59.000Z",
+        "updatedAt": "2023-11-22T09:57:25.000Z"
+    }
+]
