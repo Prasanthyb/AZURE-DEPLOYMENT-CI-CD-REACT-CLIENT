@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import cars from "./TemplateData.json";
 import "./App.css";
 
-const ApiKey = "51732afeaeba4f48964f8a32f8c318c0";
-const AzureEndpoint = "https://mission.cognitiveservices.azure.com/";
+const ApiKey = process.env.REACT_APP_API_KEY;
+const AzureEndpoint = process.env.REACT_APP_AZURE_ENDPOINT;
 
 function App() {
   const [data, setData] = useState();
