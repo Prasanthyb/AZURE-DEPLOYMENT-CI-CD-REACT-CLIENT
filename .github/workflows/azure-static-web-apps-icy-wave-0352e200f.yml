@@ -21,8 +21,8 @@ jobs:
           lfs: false
       - name: Set environment variables
         run: |
-          echo "REACT_APP_API_KEY=${{ secrets.AZURE_API_KEY }}" >> $GITHUB_ENV
-          echo "REACT_APP_AZURE_ENDPOINT=${{ secrets.AZURE_API_ENDPOINT }}" >> $GITHUB_ENV
+          echo "REACT_APP_API_KEY=${{ secrets.REACT_APP_API_KEY }}" >> $GITHUB_ENV
+          echo "REACT_APP_AZURE_ENDPOINT=${{ secrets.REACT_APP_AZURE_ENDPOINT }}" >> $GITHUB_ENV
 
       - name: Build And Deploy
         id: builddeploy
